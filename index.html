@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LANCast | SDN-Based LAN Broadcasting</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <title>LANCast – SDN LAN Broadcasting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-900 text-gray-100 font-sans">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-600">LANCast</h1>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#features" class="hover:text-blue-600">Features</a>
-                <a href="#architecture" class="hover:text-blue-600">Architecture</a>
-                <a href="#about" class="hover:text-blue-600">About</a>
-            </div>
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full bg-gray-800/90 backdrop-blur-md shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-indigo-400">LANCast</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#about" class="hover:text-indigo-300">About</a>
+        <a href="#features" class="hover:text-indigo-300">Features</a>
+        <a href="#architecture" class="hover:text-indigo-300">Architecture</a>
+        <a href="#contact" class="hover:text-indigo-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 bg-gradient-to-br from-indigo-700 to-blue-900">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">LANCast</h1>
+    <p class="max-w-3xl text-lg md:text-xl mb-8">
+      Stream your screen to multiple devices within a Local Area Network — even with no internet — using Software Defined Networking.
+    </p>
+    <div class="flex gap-4">
+      <a href="#about" class="px-6 py-3 rounded-full bg-white text-indigo-700 font-semibold hover:bg-gray-100 transition">
+        Learn More
+      </a>
+      <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
+         class="px-6 py-3 rounded-full bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition">
+        View on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
+    <div class="max-w-4xl text-center space-y-4">
+      <h2 class="text-4xl font-bold text-indigo-400 mb-4">About the Project</h2>
+      <p class="text-lg leading-relaxed">
+        LANCast is an SDN-driven one-to-many screen broadcasting system built for offline LAN environments.
+        A Java-based broadcaster application sends multicast video frames to many viewer clients, and an SDN controller
+        (Ryu + OpenFlow) intelligently manages the network traffic to ensure efficient delivery, low latency, and optimized bandwidth usage.
+      </p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+    <div class="max-w-5xl text-center space-y-8">
+      <h2 class="text-4xl font-bold text-indigo-400">Key Features</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Offline Streaming</h3>
+          <p>Broadcast your screen to multiple devices without needing internet.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                SDN-Based Offline LAN Screen Broadcasting
-            </h2>
-            <p class="text-lg md:text-xl mb-8">
-                Stream your screen to multiple devices without internet using Software Defined Networking.
-            </p>
-            <a href="#features" 
-               class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">
-               Explore Project
-            </a>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">SDN Traffic Optimization</h3>
+          <p>Uses SDN controller and OpenFlow to manage network traffic efficiently.</p>
         </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="py-20">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-12">Key Features</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h4 class="text-xl font-semibold mb-4 text-blue-600">Offline Streaming</h4>
-                    <p>No internet required. Works fully inside Local Area Networks.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h4 class="text-xl font-semibold mb-4 text-blue-600">SDN Optimization</h4>
-                    <p>Uses centralized SDN controller to optimize traffic flow and reduce congestion.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg">
-                    <h4 class="text-xl font-semibold mb-4 text-blue-600">One-to-Many Broadcast</h4>
-                    <p>Single broadcaster streams to multiple receivers using UDP multicast.</p>
-                </div>
-
-            </div>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Multicast Delivery</h3>
+          <p>One hosted stream is replicated to many viewers using UDP multicast.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Architecture Section -->
-    <section id="architecture" class="bg-gray-100 py-20">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-10">System Architecture</h3>
-            <div class="bg-white p-8 rounded-2xl shadow-lg text-left overflow-x-auto">
-<pre class="text-sm">
+  <!-- ARCHITECTURE -->
+  <section id="architecture" class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
+    <div class="max-w-4xl w-full text-center space-y-6">
+      <h2 class="text-4xl font-bold text-indigo-400">System Architecture</h2>
+      <pre class="bg-gray-900 p-6 rounded-xl text-left text-sm leading-relaxed">
 Broadcaster (Java App)
         |
         | UDP Multicast
@@ -75,29 +84,47 @@ OpenFlow Switch  <---->  SDN Controller (Ryu)
         |
         v
 Multiple Receivers (Java App)
-</pre>
-            </div>
-        </div>
-    </section>
+      </pre>
+      <p class="text-lg">
+        The SDN Controller monitors and manages packet flows between broadcaster and receivers using OpenFlow.
+      </p>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold mb-6">About the Project</h3>
-            <p class="text-lg leading-relaxed">
-                LANCast is an academic Software Defined Networking (SDN) project 
-                designed to demonstrate multicast traffic optimization inside 
-                LAN environments. It integrates Java-based streaming with an 
-                SDN controller to intelligently manage packet forwarding, 
-                ensuring low latency and efficient bandwidth usage.
-            </p>
-        </div>
-    </section>
+  <!-- HOW IT WORKS -->
+  <section class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+    <div class="max-w-5xl text-center space-y-6">
+      <h2 class="text-4xl font-bold text-indigo-400">How It Works</h2>
+      <ul class="list-disc text-left mx-auto max-w-3xl space-y-3 text-lg">
+        <li>Java broadcaster captures screen frames and encodes them.</li>
+        <li>Frames are sent via UDP multicast to a multicast group.</li>
+        <li>Receivers subscribe to the multicast group to display the broadcast.</li>
+        <li>SDN Ryu Controller detects traffic and installs OpenFlow rules.</li>
+        <li>Switches forward packets based on controller instructions for optimal performance.</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-6 text-center">
-        <p>© 2026 LANCast | Developed as an SDN Academic Project</p>
-    </footer>
+  <!-- GET STARTED -->
+  <section class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
+    <div class="max-w-3xl text-center space-y-6">
+      <h2 class="text-4xl font-bold text-indigo-400">Get Started</h2>
+      <p class="text-lg leading-relaxed">
+        Clone the repository below and follow the setup instructions in the README to run the application locally
+        using Mininet and Ryu SDN controller.
+      </p>
+      <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
+         class="inline-block px-8 py-3 bg-indigo-500 text-white font-semibold rounded-full hover:bg-indigo-600 transition">
+        Open GitHub Repo
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="bg-gray-900 text-gray-500 text-center py-8">
+    <p>🚀 Developed by <strong>Mohamed Sameer S</strong> | CSE Student</p>
+    <p>📁 <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank" class="text-indigo-400 hover:underline">https://github.com/mdsameerCrescent/LANCast.git</a></p>
+  </footer>
 
 </body>
 </html>
