@@ -2,80 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LANCast – SDN LAN Broadcasting</title>
+  <title>LANCast – SDN-Based Offline LAN Screen Broadcasting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
+<body class="bg-gray-950 text-gray-100 font-sans">
 
-  <!-- NAVIGATION -->
-  <nav class="fixed top-0 w-full bg-gray-800/90 backdrop-blur-md shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-indigo-400">LANCast</div>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#about" class="hover:text-indigo-300">About</a>
-        <a href="#features" class="hover:text-indigo-300">Features</a>
-        <a href="#architecture" class="hover:text-indigo-300">Architecture</a>
-        <a href="#contact" class="hover:text-indigo-300">Contact</a>
-      </div>
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur shadow z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-400">LANCast</h1>
+    <div class="hidden md:flex space-x-6">
+      <a href="#overview" class="hover:text-indigo-300">Overview</a>
+      <a href="#features" class="hover:text-indigo-300">Features</a>
+      <a href="#architecture" class="hover:text-indigo-300">Architecture</a>
+      <a href="#github" class="hover:text-indigo-300">GitHub</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO SECTION -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 bg-gradient-to-br from-indigo-700 to-blue-900">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">LANCast</h1>
-    <p class="max-w-3xl text-lg md:text-xl mb-8">
-      Stream your screen to multiple devices within a Local Area Network — even with no internet — using Software Defined Networking.
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 bg-gradient-to-br from-indigo-700 to-blue-900">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6">🚀 LANCast</h1>
+  <p class="max-w-3xl text-lg md:text-xl mb-8">
+    SDN-Based Offline LAN Screen Broadcasting System
+  </p>
+  <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
+     class="px-8 py-3 bg-indigo-500 text-white font-semibold rounded-full hover:bg-indigo-600 transition">
+    View on GitHub
+  </a>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">📌 Overview</h2>
+    <p class="text-lg leading-relaxed">
+      <strong>LANCast</strong> is a Software-Defined Networking (SDN) based one-to-many screen broadcasting system
+      designed for offline Local Area Networks (LAN). It enables a single broadcaster to stream their screen
+      in real time to multiple receivers without requiring internet access.
     </p>
-    <div class="flex gap-4">
-      <a href="#about" class="px-6 py-3 rounded-full bg-white text-indigo-700 font-semibold hover:bg-gray-100 transition">
-        Learn More
-      </a>
-      <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
-         class="px-6 py-3 rounded-full bg-indigo-500 text-white font-semibold hover:bg-indigo-600 transition">
-        View on GitHub
-      </a>
-    </div>
-  </section>
+    <ul class="list-disc text-left mx-auto max-w-2xl space-y-2">
+      <li>Java for screen capture and streaming</li>
+      <li>UDP Multicast for one-to-many communication</li>
+      <li>Ryu SDN Controller for traffic optimization</li>
+      <li>OpenFlow-enabled switches (Mininet simulation)</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about" class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
-    <div class="max-w-4xl text-center space-y-4">
-      <h2 class="text-4xl font-bold text-indigo-400 mb-4">About the Project</h2>
-      <p class="text-lg leading-relaxed">
-        LANCast is an SDN-driven one-to-many screen broadcasting system built for offline LAN environments.
-        A Java-based broadcaster application sends multicast video frames to many viewer clients, and an SDN controller
-        (Ryu + OpenFlow) intelligently manages the network traffic to ensure efficient delivery, low latency, and optimized bandwidth usage.
-      </p>
-    </div>
-  </section>
+<!-- PROBLEM -->
+<section class="min-h-screen flex items-center justify-center px-6 bg-gray-950">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">🎯 Problem Statement</h2>
+    <ul class="list-disc text-left mx-auto max-w-2xl space-y-2">
+      <li>Network congestion</li>
+      <li>High bandwidth consumption</li>
+      <li>Increased latency</li>
+      <li>Packet loss under load</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- FEATURES -->
-  <section id="features" class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
-    <div class="max-w-5xl text-center space-y-8">
-      <h2 class="text-4xl font-bold text-indigo-400">Key Features</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Offline Streaming</h3>
-          <p>Broadcast your screen to multiple devices without needing internet.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-300">SDN Traffic Optimization</h3>
-          <p>Uses SDN controller and OpenFlow to manage network traffic efficiently.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-          <h3 class="text-xl font-semibold mb-2 text-indigo-300">Multicast Delivery</h3>
-          <p>One hosted stream is replicated to many viewers using UDP multicast.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- SOLUTION -->
+<section class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">💡 Proposed Solution</h2>
+    <ol class="list-decimal text-left mx-auto max-w-2xl space-y-2">
+      <li>Broadcaster sends video frames using UDP multicast</li>
+      <li>Receivers join the multicast group</li>
+      <li>SDN controller installs flow rules</li>
+      <li>Switches forward packets efficiently</li>
+      <li>Traffic is prioritized for smooth playback</li>
+    </ol>
+  </div>
+</section>
 
-  <!-- ARCHITECTURE -->
-  <section id="architecture" class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
-    <div class="max-w-4xl w-full text-center space-y-6">
-      <h2 class="text-4xl font-bold text-indigo-400">System Architecture</h2>
-      <pre class="bg-gray-900 p-6 rounded-xl text-left text-sm leading-relaxed">
+<!-- ARCHITECTURE -->
+<section id="architecture" class="min-h-screen flex items-center justify-center px-6 bg-gray-950">
+  <div class="max-w-4xl w-full text-center space-y-6">
+    <h2 class="text-4xl font-bold text-indigo-400">🏗️ System Architecture</h2>
+    <pre class="bg-gray-900 p-6 rounded-xl text-left text-sm leading-relaxed">
 Broadcaster (Java App)
         |
         | UDP Multicast
@@ -84,47 +91,83 @@ OpenFlow Switch  <---->  SDN Controller (Ryu)
         |
         v
 Multiple Receivers (Java App)
-      </pre>
-      <p class="text-lg">
-        The SDN Controller monitors and manages packet flows between broadcaster and receivers using OpenFlow.
-      </p>
-    </div>
-  </section>
+    </pre>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
-    <div class="max-w-5xl text-center space-y-6">
-      <h2 class="text-4xl font-bold text-indigo-400">How It Works</h2>
-      <ul class="list-disc text-left mx-auto max-w-3xl space-y-3 text-lg">
-        <li>Java broadcaster captures screen frames and encodes them.</li>
-        <li>Frames are sent via UDP multicast to a multicast group.</li>
-        <li>Receivers subscribe to the multicast group to display the broadcast.</li>
-        <li>SDN Ryu Controller detects traffic and installs OpenFlow rules.</li>
-        <li>Switches forward packets based on controller instructions for optimal performance.</li>
-      </ul>
-    </div>
-  </section>
+<!-- FEATURES -->
+<section id="features" class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+  <div class="max-w-5xl space-y-6 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">📊 Key Features</h2>
+    <ul class="list-disc text-left mx-auto max-w-3xl space-y-2">
+      <li>Offline operation</li>
+      <li>One-to-many streaming</li>
+      <li>Efficient bandwidth utilization</li>
+      <li>Centralized SDN control</li>
+      <li>Scalable architecture</li>
+      <li>Real-time screen broadcasting</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- GET STARTED -->
-  <section class="min-h-screen flex items-center justify-center px-6 bg-gray-800">
-    <div class="max-w-3xl text-center space-y-6">
-      <h2 class="text-4xl font-bold text-indigo-400">Get Started</h2>
-      <p class="text-lg leading-relaxed">
-        Clone the repository below and follow the setup instructions in the README to run the application locally
-        using Mininet and Ryu SDN controller.
-      </p>
-      <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
-         class="inline-block px-8 py-3 bg-indigo-500 text-white font-semibold rounded-full hover:bg-indigo-600 transition">
-        Open GitHub Repo
-      </a>
-    </div>
-  </section>
+<!-- FUTURE -->
+<section class="min-h-screen flex items-center justify-center px-6 bg-gray-950">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">🚀 Future Enhancements</h2>
+    <ul class="list-disc text-left mx-auto max-w-2xl space-y-2">
+      <li>Adaptive bitrate streaming</li>
+      <li>H.264 / H.265 compression</li>
+      <li>Authentication and access control</li>
+      <li>Web-based monitoring dashboard</li>
+      <li>Deployment on real OpenFlow hardware</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- CONTACT / FOOTER -->
-  <footer id="contact" class="bg-gray-900 text-gray-500 text-center py-8">
-    <p>🚀 Developed by <strong>Mohamed Sameer S</strong> | CSE Student</p>
-    <p>📁 <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank" class="text-indigo-400 hover:underline">https://github.com/mdsameerCrescent/LANCast.git</a></p>
-  </footer>
+<!-- USE CASES -->
+<section class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">📌 Use Cases</h2>
+    <ul class="list-disc text-left mx-auto max-w-2xl space-y-2">
+      <li>Smart Classrooms</li>
+      <li>College Laboratories</li>
+      <li>Seminar Halls</li>
+      <li>Campus Broadcasting</li>
+      <li>Corporate Training Rooms</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LEARNING -->
+<section class="min-h-screen flex items-center justify-center px-6 bg-gray-950">
+  <div class="max-w-4xl space-y-4 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">📚 Learning Outcomes</h2>
+    <ul class="list-disc text-left mx-auto max-w-2xl space-y-2">
+      <li>Practical SDN implementation</li>
+      <li>OpenFlow-based traffic management</li>
+      <li>Multicast networking concepts</li>
+      <li>Real-time multimedia streaming</li>
+      <li>Network optimization techniques</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github" class="min-h-screen flex items-center justify-center px-6 bg-gray-900">
+  <div class="max-w-3xl space-y-6 text-center">
+    <h2 class="text-4xl font-bold text-indigo-400">📂 GitHub Repository</h2>
+    <p>View the full source code and documentation:</p>
+    <a href="https://github.com/mdsameerCrescent/LANCast.git" target="_blank"
+       class="px-8 py-3 bg-indigo-500 text-white font-semibold rounded-full hover:bg-indigo-600 transition">
+      Open LANCast on GitHub
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-gray-500 text-center py-6">
+  <p>© 2026 LANCast | Developed by Mohamed Sameer S (CSE)</p>
+</footer>
 
 </body>
 </html>
